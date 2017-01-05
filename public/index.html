@@ -11,8 +11,9 @@
     <div id="messages"></div>
     <form onsubmit="return enviarMensaje(this)">
         <input type="text" id="author" placeholder="Username">
-        <input type="text" id="message" placeholder="Message">
+        <input type="text" id="message" placeholder="Message" onkeyup="return verificarTexto()">
         <input type="submit" value="comentar">
     </form>
+    <div id="escribiendo"></div>
 </body>
 </html>

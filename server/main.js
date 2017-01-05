@@ -26,13 +26,23 @@ io.on('connection', function(socket){
     socket.on('new-message', function(data){
         messages.push(data);
         io.sockets.emit('messages', messages);
-    })
-})
+    });
+
+    socket.on('writting', function(data){
+        console.log("alguien escribe...");
+        io.sockets.emit('escribiendo', data);
+    });
+
+    socket.on('stop', function(data){
+        console.log("paro de escribir...");
+        io.sockets.emit('paro', data);
+    });
+});
 
 
 server.listen('8000', function(){
     console.log("Server corriendo en el puerto 8000")
-})
+});
 
 
 
