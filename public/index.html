@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Aplicación con pinches sockets</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>My App</h1>
+    <div id="messages"></div>
+    <form onsubmit="return enviarMensaje(this)">
+        <input type="text" id="author" placeholder="Username">
+        <input type="text" id="message" placeholder="Message">
+        <input type="submit" value="comentar">
+    </form>
+</body>
+</html>
