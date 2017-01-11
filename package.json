@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap-material-design": "^0.5.10",
     "express": "^4.14.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "socket.io": "^1.7.2"
   }
 }

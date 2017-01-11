@@ -3,17 +3,73 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Aplicación con pinches sockets</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>My App</h1>
-    <div id="messages"></div>
-    <form onsubmit="return enviarMensaje(this)">
-        <input type="text" id="author" placeholder="Username">
-        <input type="text" id="message" placeholder="Message" onkeyup="return verificarTexto()">
-        <input type="submit" value="comentar">
-    </form>
-    <div id="escribiendo"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 well recuadro">
+                <div class="col-sm-4 pane contacts">
+                    <input type="text" class="form-control" autocomplete="off" id="author" placeholder="Username">
+                    <div class=" contact-chat">
+                        Contacto 1
+                    </div>
+                    <div class=" contact-chat">
+                        Contacto 1
+                    </div>
+                    <div class=" contact-chat">
+                        Contacto 1
+                    </div>
+                    <div class=" contact-chat">
+                        Contacto 1
+                    </div>
+                    <div class=" contact-chat">
+                        Contacto 1
+                    </div>
+                </div>
+                <div class="col-sm-8 pane chat">
+                    <div class="text" id="messages"></div>
+                    <div class="field">
+                        <form class="form-horizontal" onsubmit="return enviarMensaje(this)">
+                            <div class="form-group col-sm-11 label-floating">
+                                <input class="form-control" id="message" placeholder="Message" onkeyup="return verificarTexto()" autocomplete="off" type="text">
+                            </div>
+                            <a class=" col-sm-1 btn btn-raised btn-success btn-fab"><i class="material-icons">send</i></a>
+                        </form>
+                        <label id="escribiendo"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<h1>My App</h1>-->
+    <!--<div id="messages"></div>-->
+    <!--<form onsubmit="return enviarMensaje(this)">-->
+        <!--<input type="text" id="message" placeholder="Message" onkeyup="return verificarTexto()">-->
+        <!--<input type="submit" value="comentar">-->
+    <!--</form>-->
+    <!--<div id="root"></div>-->
 </body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/libs/react.js"></script>
+<script src="js/libs/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script src="js/libs/jquery-2.2.4.min.js"></script>
+<script src="js/libs/material.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $.material.init();
+</script>
+<!--<script type="text/babel">-->
+    <!--const element = <h1>Hello, world</h1>;-->
+
+    <!--ReactDOM.render(-->
+        <!--element,-->
+        <!--document.getElementById('root')-->
+    <!--);-->
+<!--</script>-->
 </html>
